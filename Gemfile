@@ -8,6 +8,8 @@ gem 'sqlite3', '~> 1.4'
 gem 'puma', '~> 4.1'
 gem 'webpacker', '~> 4.0'
 gem 'turbolinks', '~> 5'
+gem 'bootstrap'
+gem 'jquery-rails'
 
 group :development, :test do
   gem 'pry'

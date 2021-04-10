@@ -1,7 +1,18 @@
-<h1><%= @post.title %></h1>
+<article class="post">
+  <section class="post-head">
+    <h1><%= @post.title %></h1>
+    <small>
+      <%= link_to 'Изменить', edit_post_path(@post), class: 'btn btn-outline-primary btn-sm' %>
+      |
+      <%= link_to 'Удалить', post_path(@post), method: :delete, class: 'btn btn-outline-danger btn-sm',
+                  data: { confirm: 'Вы уверены?' } %>
+      |
+      <time><%= @post.created_at.to_date.strftime("%d %B, %Y ") %></time>
+    </small>
+  </section>
 
-<%= link_to 'Изменить', edit_post_path(@post) %>
-<%= link_to 'Удалить', post_path(@post), method: :delete,
-                       data: { confirm: 'Вы уверены?' } %>
+  <section class="post-body">
+    <%= @post.body %>
+  </section>
+</article>
 
-<p><%= @post.body %></p>
