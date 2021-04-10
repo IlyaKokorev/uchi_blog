@@ -1,0 +1,34 @@
+ru:
+  app:
+    name: 'Simple Blog'
+    contacts: 'Контакты'
+    all: 'Все статьи'
+    new: 'Новая статья'
+
+  common:
+    errors: 'При заполнении формы возникли ошибки:'
+    back: 'Назад'
+    save: 'Сохранить'
+
+  activerecord:
+    models:
+      post: 'Статья'
+    attributes:
+      post:
+        title: 'Статья'
+        summary: 'Краткое содержание'
+        body: 'Содержание'
+    errors:
+      messages:
+        blank: 'не может быть пустым'
+
+  posts:
+    new:
+      title: 'Новая статья'
+    index:
+      title: 'Все статьи'
+    edit:
+      title: 'Редактировать статью'
+    form:
+      delete: 'Удалить'
+      edit: 'Изменить'
