@@ -35,6 +35,18 @@
   </div>
 
   <div class="container main">
+    <div class="row">
+      <div class="col-md-12">
+        <% if flash.any? %>
+          <div class="content-wrapper buffer-both">
+            <% flash.each do |name, message| %>
+              <%= content_tag :div, message, class: "alert alert-#{name}" %>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
     <%= yield %>
   </div>
   </body>
