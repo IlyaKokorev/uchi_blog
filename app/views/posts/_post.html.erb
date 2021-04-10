@@ -2,11 +2,13 @@
   <section class="post-head">
     <h2><%= link_to post.title, post_path(post) %></h2>
     <small>
-      <%= link_to t('posts.form.edit'), edit_post_path(post), class: 'btn btn-outline-primary btn-sm' %>
-      |
-      <%= link_to t('posts.form.delete'), post_path(post), method: :delete, class: 'btn btn-outline-danger btn-sm',
-                                              data: { confirm: 'Вы уверены?' } %>
-      |
+      <% if user_signed_in? %>
+        <%= link_to t('posts.form.edit'), edit_post_path(post), class: 'btn btn-outline-primary btn-sm' %>
+        |
+        <%= link_to t('posts.form.delete'), post_path(post), method: :delete, class: 'btn btn-outline-danger btn-sm',
+                                                data: { confirm: 'Вы уверены?' } %>
+        |
+      <% end %>
       <time><%= post.created_at.to_date.strftime("%d %B, %Y ") %></time>
     </small>
   </section>

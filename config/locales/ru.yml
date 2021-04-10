@@ -6,6 +6,7 @@ ru:
     new: 'Новая статья'
     log_in: 'Вход'
     log_out: 'Выход'
+    edit_user_password: 'Сменить пароль'
 
   common:
     errors: 'При заполнении формы возникли ошибки:'
