@@ -4,11 +4,14 @@ ru:
     contacts: 'Контакты'
     all: 'Все статьи'
     new: 'Новая статья'
+    log_in: 'Вход'
+    log_out: 'Выход'
 
   common:
     errors: 'При заполнении формы возникли ошибки:'
     back: 'Назад'
     save: 'Сохранить'
+    sign_in: 'Войти'
 
   activerecord:
     models:
@@ -18,6 +21,11 @@ ru:
         title: 'Статья'
         summary: 'Краткое содержание'
         body: 'Содержание'
+      user:
+        email: 'Email'
+        name: 'Имя'
+        password: 'Пароль'
+        remember_me: 'Запомнить меня'
     errors:
       messages:
         blank: 'не может быть пустым'
@@ -32,3 +40,11 @@ ru:
     form:
       delete: 'Удалить'
       edit: 'Изменить'
+
+  pages:
+    users:
+      edit_password: 'Изменить пароль'
+      new_password: 'Новый пароль'
+      password_warning: 'знаков минимум'
+      password_confirmation: 'Подтвердите пароль'
+      password_change: 'Изменить пароль'

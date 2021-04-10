@@ -20,14 +20,26 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="<%= posts_path %>"><%= t('app.all') %></a>
+              <a class="nav-link" aria-current="page" href="<%= posts_path %>"><%= t('app.all') %></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="<%= new_post_path %>"><%= t('app.new') %></a>
+              <a class="nav-link" aria-current="page" href="<%= new_post_path %>"><%= t('app.new') %></a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#"><%= t('app.contacts') %></a>
-            </li>
+          </ul>
+
+          <ul class="navbar-nav pull-xs-right">
+            <% if user_signed_in? %>
+              <li class="nav-item">
+                <%= link_to t('app.log_out'), destroy_user_session_path, method: :delete, class: 'nav-link' %>
+              </li>
+            <% else %>
+              <li class="nav-item">
+                <%= link_to t('app.log_in'), new_user_session_path, class: 'nav-link' %>
+              </li>
+            <% end %>
+          </ul>
+
+            </p>
           </ul>
         </div>
       </div>
@@ -40,7 +52,10 @@
         <% if flash.any? %>
           <div class="content-wrapper buffer-both">
             <% flash.each do |name, message| %>
-              <%= content_tag :div, message, class: "alert alert-#{name}" %>
+              <div class="alert <%= bootstrap_class_for(name) %>">
+                <button class="close" data-dismiss="alert">&times;</button>
+                <%= message %>
+              </div>
             <% end %>
           </div>
         <% end %>

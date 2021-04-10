@@ -11,6 +11,7 @@ gem 'turbolinks', '~> 5'
 gem 'bootstrap'
 gem 'bootstrap_form'
 gem 'jquery-rails'
+gem 'devise'
 
 group :development, :test do
   gem 'pry'
