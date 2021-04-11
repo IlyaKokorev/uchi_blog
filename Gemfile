@@ -14,6 +14,7 @@ gem 'bootstrap_form'
 gem 'jquery-rails'
 gem 'devise'
 gem 'will_paginate'
+gem 'ffaker'
 
 group :development, :test do
   gem 'pry'
