@@ -1,12 +1,5 @@
 <% if @post.errors.any? %>
-  <div class="aller allert-danger">
-    <h5><%= t('common.errors') %></h5>
-    <ul>
-      <% @post.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-    </ul>
-  </div>
+
 <% end %>
 
 <%= form_for @post do |f| %>
@@ -26,7 +19,7 @@
   </div>
 
   <div class="form-action ">
-    <%= f.submit t('common.save'), class: "btn btn-outline-success btn-lg btn-block" %>
-    <%= link_to t('common.back'), :back, class: "btn btn-outline-primary btn-sm btn-block"%>
+    <%= f.submit 'Сохранить', class: "btn btn-outline-success btn-lg btn-block" %>
+    <%= link_to 'Назад', :back, class: "btn btn-outline-primary btn-sm btn-block"%>
   </div>
 <% end %>

@@ -1,6 +1,7 @@
 ru:
   app:
     name: 'Simple Blog'
+    name_to: 'Simple Blog имени '
     contacts: 'Контакты'
     all: 'Все статьи'
     new: 'Новая статья'
@@ -13,6 +14,9 @@ ru:
     back: 'Назад'
     save: 'Сохранить'
     sign_in: 'Войти'
+  will_paginate:
+    previous_label: '&larr; Туда'
+    next_label: 'Сюда &rarr;'
 
   activerecord:
     models:
