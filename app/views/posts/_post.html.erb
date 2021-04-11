@@ -1,6 +1,6 @@
 <article class="post">
   <section class="post-head">
-    <h2><%= link_to post.title, post_path(post) %></h2>
+    <h2><%= link_to post.title, post_path(post), class: 'text-info' %></h2>
     <small>
       <% if user_signed_in? %>
         <%= link_to t('posts.form.edit'), edit_post_path(post), class: 'btn btn-outline-primary btn-sm' %>
