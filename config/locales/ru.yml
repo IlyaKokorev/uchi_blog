@@ -1,7 +1,7 @@
 ru:
   app:
     name: 'Simple Blog'
-    name_to: 'Simple Blog имени '
+    name_to: 'Simple Blog для '
     contacts: 'Контакты'
     all: 'Все статьи'
     new: 'Новая статья'

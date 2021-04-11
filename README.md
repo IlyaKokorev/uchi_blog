@@ -1,24 +1,16 @@
-# README
+# Simple Blog для UCHI.ru
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Этот простой блог создан в рамках тестового задания для UCHI.ru
 
-Things you may want to cover:
+В рамках ТЗ он не имеет системы регистрации и предназначен только для одного пользователя. 
 
-* Ruby version
+* Аутентификация: gem devise
+* Наполнение блога: gem ffaker
+* Оформление: gem bootstrap
 
-* System dependencies
+Данные для входа:
+* Email: teacher@uchi.ru
+* Пароль: 123123
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Размещено на heroku
+* [SimpleBlog](https://simpleblogtouchi.herokuapp.com/posts)
